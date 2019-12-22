@@ -5,7 +5,7 @@ const faker = require('faker');
 
 router.get('/api/users', async (req,res) => {
     const users = await User.find();
-    res.json(users);
+    res.json({users});
 });
 router.get('/api/users/create', async (req, res) =>{
     for(let i = 0; i<5; i++){
